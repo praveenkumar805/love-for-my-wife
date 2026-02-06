@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Valentine ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      text-align: center;
+      color: #333;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    button:hover {
+      background: #e63950;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Hi My Love ❤️</h1>
+    <p>I made this little website just for you 😘</p>
+
+    <button onclick="startLove()">Click here if you love me 💕</button>
+
+    <div id="step1" class="hidden">
+      <p>You are my favorite human in this universe 🌍</p>
+      <button onclick="nextStep()">Continue 😏</button>
+    </div>
+
+    <div id="step2" class="hidden">
+      <p>Quick question…</p>
+      <p><strong>Who loves more?</strong></p>
+      <button onclick="wrong()">You 😜</button>
+      <button onclick="right()">Me 😍</button>
+    </div>
+
+    <div id="final" class="hidden">
+      <h2>Correct Answer ❤️</h2>
+      <p>I love you more than words, code, and coffee ☕💻</p>
+      <p>Happy Valentine’s Day, my forever 💖</p>
+    </div>
+  </div>
+
+  <script>
+    function startLove() {
+      document.getElementById("step1").classList.remove("hidden");
+    }
+    function nextStep() {
+      document.getElementById("step2").classList.remove("hidden");
+    }
+    function wrong() {
+      alert("Nice try 😜 But nope, it's still me ❤️");
+    }
+    function right() {
+      document.getElementById("final").classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
